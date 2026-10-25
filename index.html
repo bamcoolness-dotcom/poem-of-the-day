@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Poem of the Day · Timeless Words Daily</title>
+<style>body{margin:0;font-family:Georgia,serif;background:#f6f1e7;color:#2b2420;line-height:1.6}
+main{max-width:640px;margin:0 auto;padding:2rem 1.2rem}header{text-align:center;letter-spacing:.15em;text-transform:uppercase;font-size:.8rem;color:#8a6d3b}
+h1{text-align:center;font-weight:normal;margin:.3rem 0 2rem}h2{margin:0}.by{color:#7a6a5a;margin:.2rem 0 1.5rem}
+pre{white-space:pre-wrap;font-family:inherit;font-size:1.1rem}footer{text-align:center;font-size:.8rem;color:#999;margin-top:3rem}</style></head>
+<body><main><header>Timeless Words Daily</header><h1>Poem of the Day</h1>
+<article><h2 id="t">Loading…</h2><p class="by" id="a"></p><pre id="p"></pre></article>
+<footer id="d"></footer></main>
+<script>fetch('poems.json').then(r=>r.json()).then(ps=>{const n=new Date(),day=Math.floor(Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())/864e5),x=ps[day%ps.length];
+t.textContent=x.title;a.textContent=x.author+' ('+x.year+')';p.textContent=x.text;d.textContent=n.toDateString()+' · Public-domain poetry';});</script>
+</body></html>
